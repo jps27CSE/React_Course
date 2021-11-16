@@ -3,6 +3,7 @@ import user from "../images/1.png";
 
 const ContactCard = (props) => {
   const { id, name, email } = props.contact;
+  console.log(props);
 
   return (
     <div className="item">
@@ -19,6 +20,7 @@ const ContactCard = (props) => {
       <i
         className="trash alternate outline icon"
         style={{ color: "red", marginTop: "7px" }}
+        onClick={() => props.clickHandler(id)}
       ></i>
     </div>
   );
